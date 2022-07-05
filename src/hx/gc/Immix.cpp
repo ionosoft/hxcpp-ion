@@ -6969,12 +6969,15 @@ bool __hxcpp_try_gc_free_zone()
 }
 
 
-
 void __hxcpp_exit_gc_free_zone()
 {
    hx::ExitGCFreeZone();
 }
 
+bool __hxcpp_try_exit_gc_free_zone()
+{
+   return hx::TryExitGCFreeZone();
+}
 
 void __hxcpp_gc_safe_point()
 {
