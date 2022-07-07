@@ -90,7 +90,8 @@
 	<files id="hxcpp_ssl" />
 
 	<lib name="advapi32.lib" if="windows" unless="static_link" />
-	<lib name="crypt32.lib" if="windows" unless="static_link" />
+	<!--lib name="crypt32.lib" if="windows" unless="static_link" /-->
+	<lib name="crypt32.lib" if="windows" />
 	<lib name="ws2_32.lib" if="windows" unless="static_link" />
 
 	<flag value="-framework" if="macos"/>

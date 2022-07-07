@@ -27,3 +27,5 @@ hxcpp.n
 *.ilk
 
 .vscode
+
+run.n
