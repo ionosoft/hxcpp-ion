@@ -1325,7 +1325,7 @@ class BuildTool
          process.exitCode();
          process.close();
 
-         if (output.indexOf("aarch64") > -1)
+         if ( (output.indexOf("aarch64") > -1) ||  (output.indexOf("arm64") > -1) )
          {
             return "arm64";
          }
@@ -2050,7 +2050,7 @@ class BuildTool
       }
       else if ( (new EReg("mac","i")).match(os) )
       {
-         set64(defines,m64);
+         set64(defines,m64, arm64);
          // Cross-compile?
          if (defines.exists("linux"))
          {
