@@ -7,6 +7,7 @@
 #include "GcRegCapture.h"
 #include <hx/Unordered.h>
 
+#include <string>
 #include <stdlib.h>
 
 
@@ -108,7 +109,7 @@ static size_t sgMaximumFreeSpace  = 1024*1024*1024;
 #endif
 
 #ifdef EMSCRIPTEN
-#define HXCPP_STACK_UP
+// #define HXCPP_STACK_UP
 #endif
 
 
