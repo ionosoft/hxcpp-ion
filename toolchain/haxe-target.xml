@@ -1,7 +1,7 @@
 <xml>
 
 <!-- make sure hxcpp.n is up to date -->
-<pleaseUpdateHxcppTool version="3" />
+<pleaseUpdateHxcppTool version="5" />
 
 <pragma once="true" />
 
@@ -12,7 +12,7 @@
 <!-- You can override the exes an "exe" section on your own .hxcpp_config -->
 <!-- You can use replace="1" to change the compiler, or omit to add flags -->
 
-<!-- Library files & targets -------------------------------------->
+<!-- Library files & targets -->
 
 <files id="cffi-depends">
   <depend name="${HXCPP}/include/hx/CFFI.h"/>
@@ -154,7 +154,6 @@
   <file name = "src/hx/gc/Immix.cpp" tags="haxe,gc" />
   <file name = "src/hx/gc/GcRegCapture.cpp" tags="haxe,gc" />
   <file name = "src/hx/Hash.cpp"/>
-  <file name = "src/hx/Interface.cpp"/>
   <file name = "src/hx/Lib.cpp" tags="haxe,static" />
   <file name = "src/hx/Object.cpp"/>
   <file name = "src/hx/StdLibs.cpp" tags="haxe,static" />
