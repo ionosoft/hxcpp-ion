@@ -86,6 +86,12 @@
   <flag value="-Fd${HXCPP_BUILD_DIR}${MSVC_OBJ_DIR}/vc.pdb" unless="HXCPP_COMPILE_CACHE" tag="debug" />
   <flag value="-Od" tag="debug" />
   <flag value="-O2" tag="release" />
+  <!-- In debug builds, add debug info to generated Haxe code (tagged "haxe,release" in Build.xml) -->
+  <!-- Intentionally no -Od override: preserving -O2 keeps the same memory/GC profile as the crashing build -->
+  <flag value="-Zi" if="debug" unless="HXCPP_COMPILE_CACHE" tag="haxe" />
+  <flag value="-Z7" if="debug HXCPP_COMPILE_CACHE" tag="haxe" />
+  <flag value="-Fd${HXCPP_BUILD_DIR}${MSVC_OBJ_DIR}/vc.pdb" if="debug" unless="HXCPP_COMPILE_CACHE" tag="haxe" />
+  
   <flag value="-bigobj" if="debug"  />
   <flag value="-Zc:inline" if="HXCPP_FAST_LINK" unless="debug || HXCPP_OPTIMIZE_LINK || HXCPP_LTCG_INCREMENTAL" /><!-- not available with -Od and -GL -->
   <flag value="-Os" tag="optim-size" />
