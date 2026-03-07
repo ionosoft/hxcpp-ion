@@ -67,6 +67,7 @@ struct RegisterCaptureBuffer
 {
    void *rbx;
    void *rbp;
+   void *rsi;
    void *rdi;
    void *r12;
    void *r13;

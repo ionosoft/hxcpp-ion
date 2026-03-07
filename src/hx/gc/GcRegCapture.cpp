@@ -52,6 +52,7 @@ void CaptureX64(RegisterCaptureBuffer &outBuffer)
 
       outBuffer.rbx = (void *)context.Rbx;
       outBuffer.rbp = (void *)context.Rbp;
+      outBuffer.rsi = (void *)context.Rsi;
       outBuffer.rdi = (void *)context.Rdi;
       outBuffer.r12 = (void *)context.R12;
       outBuffer.r13 = (void *)context.R13;
