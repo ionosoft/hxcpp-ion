@@ -202,7 +202,7 @@ static bool sGcVerifyGenerational = false;
   #endif
   
   // You can uncomment this for better call stacks if it crashes while collecting
-  #define HX_MULTI_THREAD_MARKING
+  // #define HX_MULTI_THREAD_MARKING  // DISABLED: race conditions on MSVC
 #else
   enum { MAX_GC_THREADS = 1 };
 #endif
